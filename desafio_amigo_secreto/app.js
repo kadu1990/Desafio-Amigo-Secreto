@@ -5,20 +5,28 @@
 
 
 let amigos = [];
+console.log(amigos);
 
-function acrescentarNaLista() {
-     let amigo = document.getElementById('amigo');
+function adicionarAmigo() {
+     
+    let amigo = document.getElementById('amigo').value;
 
-
-    if (amigo !== "" ) {
-        amigos.push(amigo);
-    } else{
-        alert('O campo não pode ser vazio!');
+    if (amigo == '' ) {
+       alert('Por favor, insira um nome');
     }
-}
+       else{
+       
+        amigos.push(amigo);
+        console.log(amigos);
+     
+
+       }
+        
+
+    } 
 
 
-
+//let chute = document.querySelector('input').value;
 
 
 
