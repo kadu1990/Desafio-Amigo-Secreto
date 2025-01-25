@@ -43,7 +43,7 @@ function sortearAmigo() {
 
 
     gerarNumeroAleatorio();
-
+    
 }
 
 function reiniciar() {
@@ -62,23 +62,25 @@ function gerarNumeroAleatorio() {
         numeroAleatorio = parseInt(Math.random() * amigos.length);
     }
 
-    
-
     numerosJaSorteados.push(numeroAleatorio);
+    
     console.log(amigos[numeroAleatorio]);
-
+    exibirSorteado();
 let indiceParaRemover = numeroAleatorio;
 amigos.splice(indiceParaRemover, 1);
-
-
 
 if (amigos.length > 0) {
     gerarNumeroAleatorio();
 }
 
+
 }
 
- 
+function exibirSorteado() {
+    
+    nomeDaVez = document.querySelector('#resultado');
+    nomeDaVez.innerHTML = amigos.join(', ');
+} 
 
 function naoPermitirNomeRepetido() {
     let set = new Set(amigos);
