@@ -18,7 +18,7 @@ function adicionarAmigo() {
         console.log(quantidadeDeNomes);
         console.log(amigos);
 
-      
+      listarNomesNaTela();
         naoPermitirNomeRepetido();
 
         limparCampos();
@@ -35,7 +35,8 @@ function limparCampos() {
 
 
 function listarNomesNaTela() {
-
+    let nomeInserido = document.querySelector('#listaAmigos');
+    nomeInserido.innerHTML = amigos.join(', ');
 }
 
 function sortearAmigo() {
