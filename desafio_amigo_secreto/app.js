@@ -18,9 +18,8 @@ function adicionarAmigo() {
         console.log(quantidadeDeNomes);
         console.log(amigos);
 
-        // amigos.getElementById;
-
-naoPermitirNomeRepetido();
+      
+        naoPermitirNomeRepetido();
 
         limparCampos();
 
@@ -62,39 +61,33 @@ function gerarNumeroAleatorio() {
         numeroAleatorio = parseInt(Math.random() * amigos.length);
     }
 
-    //console.log(numeroAleatorio);
-    //console.log(amigos[numeroAleatorio]);
+    
 
     numerosJaSorteados.push(numeroAleatorio);
-    //console.log(numerosJaSorteados);
+    console.log(amigos[numeroAleatorio]);
 
-    
-    //console.log(quantidadeDeSorteios);
+let indiceParaRemover = numeroAleatorio;
+amigos.splice(indiceParaRemover, 1);
 
-  //  amigos.splice(numerosJaSorteados(numeroAleatorio, 1)[0]);
-    //console.log(quantidadeDeSorteios);
-    //console.log(amigos[numeroAleatorio]);
-    
 
-while (numerosJaSorteados.length < amigos.length) {
-    
+
+if (amigos.length > 0) {
     gerarNumeroAleatorio();
-    
 }
 
-console.log(amigos[numeroAleatorio]);
-
 }
+
+ 
 
 function naoPermitirNomeRepetido() {
-let set = new Set(amigos);
+    let set = new Set(amigos);
 
-if (set.size !== amigos.length) {
-  alert('Nome repetido! Vamos recomeçar');
-  limparCampos();
-  window.location.reload(true);
+    if (set.size !== amigos.length) {
+        alert('Nome repetido! Vamos recomeçar');
+        limparCampos();
+        window.location.reload(true);
 
-} 
+    }
 
 }
 
