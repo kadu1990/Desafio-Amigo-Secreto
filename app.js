@@ -14,6 +14,7 @@ function adicionarAmigo() {
     //se o campo do nome estiver vazio vai exibir um alerta
     if (amigo === '') {
         alert('Por favor, insira um nome');
+        return;
     }
     else {
         //vai inserindo os nomes dentro da lista
@@ -38,6 +39,7 @@ function sortearAmigo() {
     if (listaAmigos.length === 0) {
         //se já estiver vazia vai reiniciar o programa chamando a função
         reiniciar();
+        return;
     }
 
     //chama a função para gerar um número aleatório
@@ -80,6 +82,7 @@ function removerJaSorteado() {
 
     if (listaAmigos.length > 0) {
         gerarNumeroAleatorio();
+        return;
     }
 }
 
@@ -98,7 +101,8 @@ function naoPermitirNomeRepetido() {
 
     if (set.size !== listaAmigos.length) {
         alert('Nome repetido! Vamos recomeçar');
-        zerarCampos();        
+        zerarCampos();
+        return;        
     }
 }
 
